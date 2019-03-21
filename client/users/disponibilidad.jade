@@ -1,0 +1,16 @@
+template(name="disponibilidad")
+    .col-md-6.col-lg-7.col-xl-8.pt-3
+      h2.font-weight-bold.text-4.mb-1 DISPONIBILIDAD DE ESPACIOS
+      form#dispinibilidadReservar(action='#', method='post')
+        .form-row.mb-4
+          .form-group.col-lg-6
+            input.form-control(type='text', value='', maxlength='100', name='email', required='' style='display: none')
+          .form-group.col-lg-6
+            input.form-control(type='text', value='', maxlength='100', name='email', required='' style='display: none')   
+        .form-row
+                p EL CALENDARIO POR DEFINIR SOLO CONTROLES STYLE DISPLAY NONE PARA PASAR PARAMETROS
+        .form-row
+          .col.text-right
+            button.btn.btn-primary.btn-rounded.btn-v-3.btn-h-3.font-weight-bold(type='submit') Reservar
+
+      

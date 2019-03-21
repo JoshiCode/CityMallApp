@@ -1,0 +1,35 @@
+template(name="crearPerfil")
+    .col-md-6.col-lg-7.col-xl-8.pt-3
+      h2.font-weight-bold.text-4.mb-1 CREAR PERFIL
+      form#crearPerfil(action='#', method='post')
+        .form-row
+          .form-group.col.mb-2
+            label.text-color-dark(for='crearPerfilNombre') NOMBRES/APELLIDOS
+            input#crearPerfilNombre.form-control.bg-light-5.border-0.rounded(type='text', value='', name='name', required='')
+        .form-row
+          .form-group.col.mb-2
+            //label.text-color-dark(for='crearPerfilCiudad') CIUDAD
+            +dropdownGroup(label="CIUDAD" title="" name="crearPerfilCiudad" listObj=ciudadesLista)
+            //input#crearPerfilCiudad.form-control.bg-light-5.border-0.rounded(type='text', value='', name='username', required='')
+        .form-row  
+          .form-group.col.mb-2
+            label.text-color-dark(for='crearPerfilDireccion') DIRECCIÓN
+            input#crearPerfilDireccion.form-control.bg-light-5.border-0.rounded(type='text', value='', name='email', required='')
+        .form-row
+          .form-group.col.mb-2
+            label.text-color-dark(for='crearPerfilTelefono') TELEFONO
+            input#crearPerfilTelefono.form-control.bg-light-5.border-0.rounded(type='text', value='', name='username', required='')
+         .form-row
+          .form-group.col.mb-2
+            label.text-color-dark(for='crearPerfilEmail') EMAIL
+            input#crearPerfilEmail.form-control.bg-light-5.border-0.rounded(type='email', value='', name='phone', required='')
+        .form-row.mb-4
+          .form-group.col-lg-6
+            label.text-color-dark(for='crearPerfilPassword') CONTRASEÑA
+            input#crearPerfilPassword.form-control.bg-light-5.border-0.rounded(type='password', value='', name='password', required='')
+          .form-group.col-lg-6
+            label.text-color-dark(for='crearPerfilPassword2') CONFIRMAR CONTRASEÑA
+            input#crearPerfilPassword2.form-control.bg-light-5.border-0.rounded(type='password', value='', name='password', required='')
+        .form-row
+          .col.text-right
+            button.btn.btn-primary.btn-rounded.btn-v-3.btn-h-3.font-weight-bold(type='submit') REGISTRASE

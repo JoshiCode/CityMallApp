@@ -1,0 +1,17 @@
+template(name="login")    
+    .col-xs-6.appear-animation.animated.fadeInRightShorter.appear-animation-visible(data-appear-animation='fadeInRightShorter', data-appear-animation-delay='200', style='animation-delay: 200ms;')
+        .border.rounded.h-100.p-5
+            span.top-sub-title.text-color-primary BIENVENIDO!
+            h2.font-weight-bold.text-4.mb-4 
+            form#frmSignIn(action='#', method='post')
+                .form-row
+                .form-group.col.mb-2
+                    label(for='frmSignInEmail') EMAIL / USUARIO
+                    input#frmSignInEmail.form-control.bg-light-5.rounded.border-0.text-1(type='email', value='', maxlength='100', name='email', required='')
+                .form-row
+                .form-group.col.mb-2
+                    label(for='#frmSignInPassword') CONTRASEÑA
+                    input#frmSignInPassword.form-control.bg-light-5.rounded.border-0.text-1(type='password', value='', name='password', required='')
+                .row.align-items-center
+                .col.text-right
+                    button.btn.btn-primary.btn-rounded.btn-v-3.btn-h-3.font-weight-bold(type='submit') INICIAR SESSIÓN

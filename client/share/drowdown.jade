@@ -1,0 +1,9 @@
+template(name="dropdown")
+    .form-group.has-icon.has-label
+        label.text-color-dark {{label}}
+        .custom-select-1
+        select.form-control.bg-light-5.text-color-dark.border-0(data-live-search='true' data-width='100%' name=name id=name  data-toggle='tooltip' title=title)
+            each listObj                
+                option(value=this.value) {{this.label}}    
+        span.form-control-icon
+            i.fa.fa-caret-down
